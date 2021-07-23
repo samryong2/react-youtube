@@ -7,7 +7,7 @@ const SearchHeader = (props) => (
         <h1 className={styles.title}>Youtube</h1>
         <input className={styles.input} type="search" placeholder="Search..."/>
         <button className={styles.button} type="submit">
-            <img src="/images/search.png" alt="search" />
+            <img className={styles.searchImg} src="/images/search.png" alt="search" />
         </button>
     </header>
 
