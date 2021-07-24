@@ -1,20 +1,37 @@
 .header{
     display: flex;
-    justify-content: space-between;
+    height: 4rem;
+    padding: 0.8em 1em;
+    background: black;
     align-items: center;
     width: 100%;
 }
 
 .img{
-    width: 5vw;
+    width: 40px;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    margin-right: 1em;
 }
 
 .title{
-    font-size: 1.25rem;
-    font-weight: 700;
+    color: white;    
 }
 
+.input{
+    font-size: 1.5rem;
+    flex-basis: 100%;
+    outline: 0;
+}
+
+.button{
+    width: 48px;
+}
 
 .searchImg{
-    width: 20px;
+    width: 100%;
+    
 }
