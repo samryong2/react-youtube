@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import styles from'./app.module.css';
 import SearchHeader from './components/search/search_header';
-import Videodetail from './components/video_detail/video_detail';
+import VideoDetail from './components/video_detail/video_detail';
 import VideoList from './components/video_list/video_list';
 
 
@@ -23,15 +23,18 @@ function App({youtube}) {
     .mostPopular()
     .then(videos => setVideos(videos));
   },[]);
+
   return (
         <div className={styles.app}>
           <SearchHeader onSearch={search}/>
-          <section>
+          <section className={styles.content}>
+            {selectedVideo && (
             <div className={styles.detail}>
-              {selectedVideo && <Videodetail video={selectedVideo}/>}
+              <VideoDetail video={selectedVideo}/>
             </div>
+            )}
             <div className={styles.list}>
-              <VideoList videos={videos} onVideoClick={selectVideo}/>
+              <VideoList videos={videos} onVideoClick={selectVideo} display={selectedVideo? 'list' : 'grid'}/>
             </div>
           </section>
         </div>
